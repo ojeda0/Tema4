@@ -17,13 +17,18 @@ public class Diapositiva20 {
 		
 		Random r1 = new Random();
 		
+		int sumaAleatorios = 0;
+		
 		for(int i=0; i<=aleatorios.length-1; i++) {
 			
-			aleatorios[i] = r1.nextInt(0, 101);
+			aleatorios[i] = r1.nextInt(1, 101);
+			
+			sumaAleatorios += aleatorios[i];
 			
 		}
 		
-		System.out.println(Arrays.toString(aleatorios));
+		System.out.printf("El array generado es: %s\n"
+				+ "La suma de estos números es %d\n", Arrays.toString(aleatorios), sumaAleatorios);
 		
 	}
 
