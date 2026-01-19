@@ -7,9 +7,16 @@ public class BibliotecaArrays {
 
 	public static void main(String[] args) {
 		
-		System.out.println(Arrays.toString(generaArrayInt(10, 1, 9)));
+		int[] arrayPrueba = generaArrayInt(10, 1, 9);
+		
+		System.out.println("Array generado: " + Arrays.toString(arrayPrueba));
+		System.out.println("Número mínimo del array: " + (minimoArrayInt(arrayPrueba)));
+		System.out.println(("Número máximo del array: " + maximoArrayInt(arrayPrueba)));
+		System.out.println(("Media del array: " + mediaArrayInt(arrayPrueba)));
 
 	}
+	
+	// EJ 1
 	
 	public static int[] generaArrayInt (int n, int minimo, int maximo) {
 		
@@ -27,6 +34,28 @@ public class BibliotecaArrays {
 		
 	}
 	
+	// EJ 2
+	
+	public static int minimoArrayInt (int[] tabla) {
+		
+		int numeroMinimo = tabla[0];
+		
+		for(int e : tabla) {
+			
+			if(e < numeroMinimo) {
+				
+				numeroMinimo = e;
+				
+			}
+			
+		}
+		
+		return numeroMinimo;
+		
+	}
+	
+	// EJ 3
+	
 	public static int maximoArrayInt (int[] tabla) {
 		
 		int numeroMaximo = tabla[0];
@@ -42,6 +71,22 @@ public class BibliotecaArrays {
 		}
 		
 		return numeroMaximo;
+		
+	}
+	
+	// EJ 4
+	
+	public static int mediaArrayInt (int[] tabla) {
+		
+		int sumaTotal = 0;
+		
+		for(int e : tabla) {
+			
+			sumaTotal += e;
+			
+		}
+		
+		return sumaTotal/tabla.length;
 		
 	}
 
