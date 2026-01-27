@@ -29,18 +29,22 @@ public class Grupo {
 	}
 	
 	public boolean eliminarAlumnoPorDNI(String dni) {
-		
+		Alumno eliminar = null;
 		boolean encontrado = false;
 		
 		for(int i=0; i<=alumnos.size()-1 && !encontrado; i++) {
 			
 			if(alumnos.get(i).getDni().equalsIgnoreCase(dni)) {
 				
-				alumnos.remove(i);
+				eliminar = alumnos.get(i);
 				encontrado = true;
 				
 			}
 			
+		}
+		
+		if(encontrado) {
+			this.alumnos.remove(eliminar);
 		}
 		
 		return encontrado;

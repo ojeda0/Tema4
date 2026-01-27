@@ -19,8 +19,7 @@ public class MainCarrito {
 		carrito1.mostrarCarrito();
 		
 		
-		// Preguntar a Vladi
-		// System.out.println(carrito1.buscarProducto("Lechuga"));
+		carrito1.buscarProducto("Lechuga").mostrarProducto();
 		
 		System.out.println("================================");
 		

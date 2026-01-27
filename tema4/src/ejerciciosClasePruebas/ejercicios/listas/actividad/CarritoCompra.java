@@ -16,36 +16,23 @@ public class CarritoCompra {
 	}
 	
 	// Métodos
-	public List<Producto> getProductos() {
-		
-		return this.productos;
-		
-	}
-	
-	public void setProductos(List<Producto> productos) {
-		
-		this.productos = productos;
-		
-	}
-	
 	public void agregarProducto(Producto p) {
 		
 		boolean existe = false;
 		
 		for(Producto producto : this.productos) {
 			
-			if(producto.getNombre().equalsIgnoreCase(p.getNombre())) {
+			if(producto.getNombre().equalsIgnoreCase(p.getNombre()) && !existe) {
 				
 				int nuevaCantidad = producto.getCantidad() + p.getCantidad();
 				producto.setCantidad(nuevaCantidad);
 				existe = true;
-				break;
 				
 			}
 			
 		}
 		
-		if(existe == false) {
+		if(!existe) {
 			
 			this.productos.add(p);
 			
@@ -60,17 +47,16 @@ public class CarritoCompra {
 		
 		for(Producto producto : this.productos) {
 		
-			if(producto.getNombre().equalsIgnoreCase(nombre)) {
+			if(producto.getNombre().equalsIgnoreCase(nombre) && !encontrado) {
 				
 				productoEliminar = producto;
 				encontrado = true;
-				break;
 				
 			}
 			
 		}
 		
-		if(encontrado == true) {
+		if(encontrado) {
 			
 			this.productos.remove(productoEliminar);
 			
@@ -86,10 +72,9 @@ public class CarritoCompra {
 		
 		for(Producto producto : this.productos) {
 			
-			if(producto.getNombre().equalsIgnoreCase(nombre)) {
+			if(producto.getNombre().equalsIgnoreCase(nombre) && productoEncontrado == null) {
 				
 				productoEncontrado = producto;
-				break;
 				
 			}
 			
@@ -134,9 +119,8 @@ public class CarritoCompra {
 		
 	}
 	
-	// Pedirle a Vladi que lo explique
 	public void ordenarPorNombre() {
-		
+
 		this.productos.sort((p1, p2) -> p1.getNombre().compareToIgnoreCase(p2.getNombre()));
 		
 	}

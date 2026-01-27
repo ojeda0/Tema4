@@ -60,4 +60,10 @@ public class Producto {
 		
 	}
 	
+	public void mostrarProducto() {
+	
+		System.out.printf("Producto: %s\n", this.getNombre());
+		
+	}
+	
 }
