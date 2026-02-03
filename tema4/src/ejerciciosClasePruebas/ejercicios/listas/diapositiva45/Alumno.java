@@ -18,25 +18,25 @@ public class Alumno {
 	
 	// MÉTODOS
 	public String getNombre() {
-		return this.nombre;
+		return nombre;
 	}
-	
-	public String getDni() {
-		return this.dni;
-	}
-	
-	public double getNotaMedia() {
-		return this.notaMedia;
-	}
-	
+
 	public void setNombre(String nombre) {
 		this.nombre = nombre;
 	}
-	
+
+	public String getDni() {
+		return dni;
+	}
+
 	public void setDni(String dni) {
 		this.dni = dni;
 	}
-	
+
+	public double getNotaMedia() {
+		return notaMedia;
+	}
+
 	public void setNotaMedia(double notaMedia) {
 		this.notaMedia = notaMedia;
 	}
